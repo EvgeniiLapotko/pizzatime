@@ -1,0 +1,33 @@
+
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+   
+    font-family: 'Roboto', sans-serif,
+    font-weiht: 300;
+    font-size: 16px;
+    line-height: 22px;
+    color: #1f1f1f;
+}
