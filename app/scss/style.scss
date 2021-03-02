@@ -1,13 +1,405 @@
 @import "vars";
 @import "global";
 
-
-
-.section__top{
-	height: 100vh;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: contain;
-	color: #fff;
-	font-family: 'Montserrat', sans-serif;
+.header {
+    background-color: rgba(#0b1419, 0.7);
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    left: 0;
+    right: 0;
 }
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.header__menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu__list {
+    li {
+        display: inline-block;
+    }
+    li:last-child {
+        padding-right: 0;
+    }
+    &-link {
+        padding: 22px 30px;
+        color: #fff;
+        font-family: "Montserrat", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        transition: all 0.4s;
+        &:hover {
+            background-color: #fff;
+            color: #000;
+        }
+    }
+}
+
+.link-tel {
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    transition: all 0.4s;
+    margin-left: 30px;
+    border: 3px solid #fff;
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-weight: 700;
+    transition: all 0.4s;
+    &:hover {
+        background-color: #fff;
+        color: #000;
+    }
+}
+
+.burger__menu {
+    display: none;
+    width: 40px;
+    margin-left: 30px;
+    cursor: pointer;
+    span {
+        display: block;
+        width: 100%;
+        height: 5px;
+        background-color: #fff;
+        border-radius: 5px;
+    }
+    span + span {
+        margin-top: 8px;
+    }
+}
+
+.section__top {
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #050505;
+    position: relative;
+    padding: 100px 0;
+    &::before {
+        content: "";
+        background-color: #000;
+        opacity: 0.5;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.section__top-container {
+    position: relative;
+    text-align: center;
+}
+
+.section__top-info {
+    color: #fcff00;
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+
+.section__top-title {
+    font-family: "Montserrat", sans-serif;
+    max-width: 470px;
+    width: 100%;
+    font-size: 55px;
+    line-height: 55px;
+    margin: 0;
+    margin-bottom: 45px;
+    font-weight: 700;
+}
+
+.product {
+    padding: 110px 0;
+}
+
+.product__title {
+    color: #ffa650;
+    text-align: center;
+    font-size: 48px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    line-height: 48px;
+    margin-bottom: 30px;
+}
+
+.catalog-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 90px;
+
+    &__inner {
+        display: flex;
+        box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.28);
+        border-radius: 40px;
+        overflow: hidden;
+        li + li {
+            border-left: 1px solid rgba(#000, 0.2);
+        }
+    }
+    &__btn {
+        padding: 15px;
+        border: none;
+        display: inline-block;
+        text-align: center;
+        background-color: transparent;
+        min-width: 150px;
+        font-size: 18px;
+        text-transform: lowercase;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        color: rgba(#000, 0.4);
+        outline: none;
+        transition: all 0.2s;
+        cursor: pointer;
+    }
+    &__btn.active {
+        background-color: #1f1f1f;
+        color: #fff;
+    }
+    &__btn:not(.active):hover {
+        background-color: #ffa650;
+        color: #fff;
+    }
+}
+
+.catalog-nav__inner {
+    display: flex;
+}
+
+.product__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -35px;
+}
+
+.product__item:nth-child(3n + 1) {
+    border-left: none;
+}
+
+.product__item {
+    width: calc(100% / 3);
+    margin-bottom: 70px;
+    padding: 0 35px;
+    border-left: 3px solid rgba(#000, 0.2);
+    &-img {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    &-title {
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-family: "Montserrat", sans-serif;
+        font-size: 22px;
+    }
+    &-text {
+        color: #9f9f9f;
+        margin-bottom: 25px;
+        font-weight: 300;
+    }
+    &-size {
+        margin-bottom: 25px;
+        display: flex;
+        overflow: hidden;
+        border-radius: 25px;
+        justify-content: space-between;
+        box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.28);
+    }
+    &-btn {
+        border: none;
+        background-color: transparent;
+        display: inline-block;
+        padding: 13px 45px;
+        color: #e6e6e6;
+        font-weight: 700;
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+        outline: none;
+        width: 33.33%;
+    }
+    &-btn.active {
+        color: #a3a3a3;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.28);
+        border-radius: 25px;
+    }
+}
+
+.product__item-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    .price {
+        color: #1f1f1f;
+        font-size: 22px;
+        font-weight: 700;
+    }
+    .price__btn {
+        background-color: #ffa650;
+        box-shadow: none;
+        max-width: 170px;
+        transition: all 0.4s;
+        &:hover {
+            background-color: #f98358;
+        }
+    }
+}
+
+.about {
+    margin-bottom: 90px;
+    background: linear-gradient(
+        90deg,
+        rgb(43, 43, 43) 0%,
+        rgb(31, 31, 31) 100%
+    );
+    position: relative;
+    color: #fff;
+}
+
+.about-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about__container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.about__content {
+    width: 50%;
+    padding: 120px 60px;
+}
+
+.about__title {
+    font-size: 36px;
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.about__info {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 300;
+}
+
+.contact {
+    margin-bottom: 90px;
+    position: relative;
+    &__title {
+        text-align: center;
+        font-weight: 700;
+        font-size: 48px;
+        color: #1f1f1f;
+    }
+}
+
+.contact-container {
+    position: relative;
+    overflow: hidden;
+    &:before {
+        content: "";
+        position: absolute;
+        background-image: url(../images/tomato.png);
+        background-size: cover;
+        width: 400px;
+        height: 200px;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.contact__inner {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 70px 0;
+}
+
+.contact__item {
+    width: 50%;
+    &-title {
+        margin: 0;
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-size: 18px;
+        font-family: "Montserrat", sans-serif;
+    }
+    &-box {
+        margin-bottom: 35px;
+    }
+    &-info {
+        margin: 0;
+        font-family: "Montserrat", sans-serif;
+    }
+}
+
+.contact__item-map {
+    height: 450px;
+    background-color: #fef0b4;
+}
+
+.contact__item-contact {
+    padding: 30px;
+}
+
+.contact__item-phone {
+    font-weight: 700;
+    transition: all 0.3s;
+    &:hover {
+        color: #ffa650;
+    }
+}
+
+.social {
+    li {
+        display: inline-block;
+    }
+    li + li {
+        margin-left: 15px;
+    }
+}
+
+.footer {
+    background: linear-gradient(
+        90deg,
+        rgb(43, 43, 43) 0%,
+        rgb(31, 31, 31) 100%
+    );
+    &__text {
+        text-align: center;
+        padding: 25px;
+        color: #fff;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        opacity: 0.3;
+    }
+}
+
+@import "media";

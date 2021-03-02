@@ -1,0 +1,138 @@
+@media (max-width: 1200px) {
+    .product__inner {
+        margin: 0 -20px;
+    }
+    .product__item {
+        padding: 0 20px;
+    }
+    .product__item-btn {
+        padding: 13px 30px;
+    }
+}
+
+@media (max-width: 900px) {
+    .menu__list {
+        display: none;
+    }
+    .burger__menu {
+        display: block;
+    }
+    .product__item {
+        width: 50%;
+    }
+    .product__item:nth-child(odd) {
+        border-left: none;
+    }
+    .product__item:nth-child(even) {
+        border-left: 3px solid rgba(#000, 0.2);
+    }
+    .contact__item-map {
+        height: 350px;
+    }
+}
+
+@media (max-width: 700px) {
+    .catalog-nav {
+        width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 70px;
+    }
+    .product__item--width {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .product__item:nth-child(even) {
+        border-left: none;
+    }
+    .catalog-nav__inner {
+        flex-wrap: wrap;
+        li {
+            flex-grow: 1;
+            border-bottom: 1px solid rgba(#000, 0.2);
+        }
+    }
+    .catalog-nav__btn {
+        width: 100%;
+    }
+    .product__item {
+        width: 100%;
+        border-left: none;
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+        border-bottom: 3px solid rgba(#000, 0.1);
+    }
+    .product__item:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border: none;
+    }
+    .about-img {
+        position: static;
+        width: 100%;
+    }
+    .about__container {
+        display: block;
+    }
+    .about__content {
+        width: 100%;
+        padding: 60px 30px;
+    }
+    .contact__inner {
+        flex-wrap: wrap;
+    }
+    .contact__item {
+        width: 100%;
+    }
+    .contact__item-contact {
+        order: -1;
+        padding-left: 0;
+        padding-bottom: 20px;
+        padding-top: 10px;
+        text-align: center;
+    }
+    .contact-container:before {
+        content: none;
+    }
+    .contact__item-map {
+        margin: 0 -20px;
+        height: 300px;
+    }
+    .contact {
+        margin-bottom: 0;
+    }
+    .contact__inner {
+        padding-bottom: 0;
+    }
+}
+@media (max-width: 500px) {
+    .section__top-info {
+        font-size: 20px;
+    }
+    .section__top-title {
+        font-size: 40px;
+    }
+    .link-tel {
+        display: none;
+    }
+    .product__title {
+        font-size: 36px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        line-height: 36px;
+    }
+}
+
+@media (max-width: 400px) {
+    .section__top-info {
+        font-size: 18px;
+    }
+    .section__top-title {
+        font-size: 36px;
+    }
+    .btn {
+        font-size: 16px;
+        max-width: 200px;
+    }
+}
