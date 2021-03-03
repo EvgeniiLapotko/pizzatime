@@ -122,8 +122,16 @@
         font-weight: 700;
         line-height: 36px;
     }
-    .link-tel__mobile{
+    .link-tel__mobile {
         display: inline-block;
+    }
+
+    .popup__form-title {
+        font-size: 28px;
+        line-height: 24px;
+    }
+    .popup__form-text {
+        font-size: 20px;
     }
 }
 

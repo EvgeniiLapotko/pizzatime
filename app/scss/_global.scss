@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -64,7 +65,7 @@ img {
     height: auto;
 }
 
-.btn-close{
+.btn-close {
     position: relative;
     border: none;
     background-color: transparent;
@@ -75,10 +76,10 @@ img {
     cursor: pointer;
     outline: none;
     transition: all 0.3;
-    
+
     &::before,
-    &::after{
-        content: '';
+    &::after {
+        content: "";
         width: 3px;
         background-color: #d2d2d2;
         height: 40px;
@@ -87,17 +88,16 @@ img {
         top: 50%;
         transform: translateY(-50%);
     }
-    &::before{
+    &::before {
         transform: translateY(-50%) rotate(45deg);
     }
-    &::after{
-        transform: translateY(-50%) rotate(-45deg); 
+    &::after {
+        transform: translateY(-50%) rotate(-45deg);
     }
-    &:hover{
+    &:hover {
         transform: scale(1.1);
     }
-    &:active{
+    &:active {
         transform: scale(0.9);
     }
-
 }

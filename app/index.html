@@ -31,7 +31,7 @@
                         </ul>
                     </nav>
                     <a href="#" class="link-tel">+7(925)-199-99-99</a>
-                    <div class="burger__menu">
+                    <div class="burger__menu" data-popup='popup__main'>
                         <span class="row"></span>
                         <span class="row"></span>
                         <span class="row"></span>
@@ -49,7 +49,7 @@
                 </h1>
                 <div class="section__top-btn">
 
-                    <a href="#" class="btn">Выбрать</a>
+                    <a href="#contacts" class="btn">Выбрать</a>
 
                 </div>
             </div>
@@ -102,7 +102,7 @@
                             <span class="price-num">800</span>
                             <span class="price-sym">&#8381</span>
                         </div>
-                        <a href="#" class="price__btn btn">заказать</a>
+                        <a href="#" class="price__btn btn" data-popup='popup-form'>заказать</a>
                     </div>
                 </div>
                 <div class="product__item product__item--width">
@@ -129,7 +129,7 @@
                             <span class="price-num">800</span>
                             <span class="price-sym">&#8381</span>
                         </div>
-                        <a href="#" class="price__btn btn">заказать</a>
+                        <a href="#" class="price__btn btn" data-popup='popup-form'>заказать</a>
                     </div>
                 </div>
                 <div class="product__item product__item--width">
@@ -156,7 +156,7 @@
                             <span class="price-num">800</span>
                             <span class="price-sym">&#8381</span>
                         </div>
-                        <a href="#" class="price__btn btn">заказать</a>
+                        <a href="#" class="price__btn btn" data-popup='popup-form'>заказать</a>
                     </div>
                 </div>
                 <div class="product__item product__item--width">
@@ -183,7 +183,7 @@
                             <span class="price-num">800</span>
                             <span class="price-sym">&#8381</span>
                         </div>
-                        <a href="#" class="price__btn btn">заказать</a>
+                        <a href="#" class="price__btn btn" data-popup='popup-form'>заказать</a>
                     </div>
                 </div>
                 <div class="product__item product__item--width">
@@ -210,7 +210,7 @@
                             <span class="price-num">800</span>
                             <span class="price-sym">&#8381</span>
                         </div>
-                        <a href="#" class="price__btn btn">заказать</a>
+                        <a href="#" class="price__btn btn" data-popup='popup-form'>заказать</a>
                     </div>
                 </div>
                 <div class="product__item product__item--width">
@@ -237,7 +237,7 @@
                             <span class="price-num">800</span>
                             <span class="price-sym">&#8381</span>
                         </div>
-                        <a href="#" class="price__btn btn">заказать</a>
+                        <a href="#" class="price__btn btn" data-popup='popup-form'>заказать</a>
                     </div>
                 </div>
                 <div class="product__item product__item--width">
@@ -264,7 +264,7 @@
                             <span class="price-num">800</span>
                             <span class="price-sym">&#8381</span>
                         </div>
-                        <a href="#" class="price__btn btn">заказать</a>
+                        <a href="#" class="price__btn btn" data-popup='popup-form'>заказать</a>
                     </div>
                 </div>
                 <div class="product__item product__item--width">
@@ -291,7 +291,7 @@
                             <span class="price-num">800</span>
                             <span class="price-sym">&#8381</span>
                         </div>
-                        <a href="#" class="price__btn btn">заказать</a>
+                        <a href="#" class="price__btn btn" data-popup='popup-form'>заказать</a>
                     </div>
                 </div>
                 <div class="product__item product__item--width">
@@ -318,7 +318,7 @@
                             <span class="price-num">800</span>
                             <span class="price-sym">&#8381</span>
                         </div>
-                        <a href="#" class="price__btn btn">заказать</a>
+                        <a href="#" class="price__btn btn" data-popup='popup-form'>заказать</a>
                     </div>
                 </div>
 
@@ -338,7 +338,7 @@
         </div>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contacts">
         <div class="container contact-container">
             <h2 class="contact__title">Контакты</h2>
 
@@ -389,7 +389,7 @@
         </div>
     </footer>
 
-    <div class="popup__menu">
+    <div class="popup__menu popup__main">
         <div class="popup__menu-inner">
             <div class="popup__menu-wrapper">
                 <div class="popup__menu-content">
@@ -420,13 +420,13 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
 
-    <div class="popup__menu active">
+    <div class="popup__menu popup-form">
         <div class="popup__menu-inner">
             <div class="popup__menu-wrapper">
-                <div class="popup__menu-content">
+                <div class="popup__menu-content popup__form-content">
                     <button class="btn-close popup__btn-close"></button>
                     <div class="popup__form-title contact__title">Заполните форму</div>
                     <div class="popup__form-text">Мы привезем вам горячую
@@ -435,9 +435,9 @@
                     <div class="popup__form-order">
                         <img src="images/1.png" alt="" class="popup__form-img">
                         <div class="order__title">
-                         <span>Салями</span>
-                         <span class="price-num">800</span>
-                         <span class="price-sym">&#8381</span>   
+                            <span class="form__price-title">Салями</span>
+                            <span class="form__price-num">800</span>
+                            <span class="form__price-sym">&#8381</span>
                         </div>
                         <div class="order__size">35 см</div>
                     </div>
@@ -457,7 +457,38 @@
                 </div>
             </div>
         </div>
-        
+
+    </div>
+
+    <div class="popup__menu popup-thanks">
+        <div class="popup__menu-inner">
+            <div class="popup__menu-wrapper">
+                <div class="popup__menu-content popup__form-content">
+                    <button class="btn-close popup__btn-close"></button>
+                    <div class="popup__massage-title contact__title">Успешно отправлено</div>
+                    <div class="popup__massage-text">Мы уже начали готовить вашу пиццу
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="popup__menu popup-error">
+        <div class="popup__menu-inner">
+            <div class="popup__menu-wrapper">
+                <div class="popup__menu-content popup__form-content">
+                    <button class="btn-close popup__btn-close"></button>
+                    <div class="popup__massage-title contact__title">Произошла ошибка</div>
+                    <div class="popup__massage-text">Пожалуйста сделайте заказ по номеру <a href="#"
+                            class="link-tel link-tel__mobile">+7(925)-199-99-99</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <script src="js/libs/libs.min.js"></script>

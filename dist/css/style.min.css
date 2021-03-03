@@ -1,6 +1,7 @@
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -74,6 +75,58 @@ img {
   height: auto;
 }
 
+.btn-close {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: all 0.3;
+  -o-transition: all 0.3;
+  transition: all 0.3;
+}
+
+.btn-close::before, .btn-close::after {
+  content: "";
+  width: 3px;
+  background-color: #d2d2d2;
+  height: 40px;
+  position: absolute;
+  border-radius: 5px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.btn-close::before {
+  -webkit-transform: translateY(-50%) rotate(45deg);
+      -ms-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+}
+
+.btn-close::after {
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+      -ms-transform: translateY(-50%) rotate(-45deg);
+          transform: translateY(-50%) rotate(-45deg);
+}
+
+.btn-close:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.btn-close:active {
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
 .header {
   background-color: rgba(11, 20, 25, 0.7);
   position: fixed;
@@ -94,6 +147,18 @@ img {
       -ms-flex-align: center;
           align-items: center;
   height: 70px;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.header__inner.active {
+  height: 60px;
+}
+
+.header__inner.active .menu__list-link {
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 
 .header__menu {
@@ -555,6 +620,209 @@ img {
   opacity: 0.3;
 }
 
+.popup__menu.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.popup__menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  overflow: auto;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.popup__menu-inner {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.popup__menu-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 50px 10px;
+}
+
+.popup__menu-content {
+  background-color: #fff;
+  max-width: 730px;
+  width: 100%;
+  padding: 70px 0;
+  margin: 0 auto;
+  color: #534c4c;
+  position: relative;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.mobile-menu__list {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.mobile-menu__list-link {
+  display: inline-block;
+  padding: 20px;
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  width: 100%;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.mobile-menu__list-link:hover {
+  background-color: #ffa650;
+  color: #fff;
+}
+
+.popup__btn-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.link-tel__mobile {
+  color: #ffa650;
+  border-color: #ffa650;
+  margin-left: 0;
+  margin-bottom: 30px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.link-tel__mobile:hover {
+  background-color: #ffa650;
+  color: #fff;
+}
+
+.popup__form-content {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.popup__form-title {
+  margin-bottom: 30px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.popup__form-text {
+  font-size: 24px;
+  line-height: 30px;
+  max-width: 335px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  color: #1f1f1f;
+}
+
+.popup__form-order {
+  max-width: 310px;
+  margin: 0 auto;
+}
+
+.popup__form-img {
+  display: block;
+  max-width: 200px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.form__price-title {
+  font-size: 22px;
+  line-height: 24px;
+  font-family: "Montserrat", sans-serif;
+  color: #1f1f1f;
+  font-weight: 700;
+  padding-right: 15px;
+}
+
+.form__price-num,
+.form__price-sym {
+  font-size: 22px;
+  line-height: 24px;
+  font-family: "Montserrat", sans-serif;
+  color: #1f1f1f;
+  font-weight: 700;
+}
+
+.order__size {
+  color: #a2a2a2;
+  margin-bottom: 30px;
+}
+
+.form__input {
+  display: block;
+  margin: 0 auto;
+  background-color: rgba(162, 162, 162, 0.3);
+  border: none;
+  outline: none;
+  margin-bottom: 10px;
+  padding: 21px 35px;
+  max-width: 300px;
+  width: 100%;
+  border-radius: 30px;
+  border: 2px solid transparent;
+}
+
+.form__input:focus {
+  border: 2px solid #ffa650;
+}
+
+.form__btn {
+  max-width: 300px;
+  width: 100%;
+  border: none;
+  padding: 21px 35px;
+  background-color: #ffa650;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: all 0.4s;
+      -ms-transform: all 0.4s;
+          transform: all 0.4s;
+  outline: none;
+}
+
+.form__btn:hover {
+  background-color: #cd8440;
+}
+
+.form__btn:active {
+  -webkit-transform: scale(0.85);
+      -ms-transform: scale(0.85);
+          transform: scale(0.85);
+}
+
+.popup__massage-title {
+  font-size: 48px;
+  line-height: 48px;
+  color: #1f1f1f;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.popup__massage-text {
+  font-size: 24px;
+  line-height: 26px;
+  color: #1f1f1f;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+.popup__massage-text a {
+  margin-top: 20px;
+}
+
 @media (max-width: 1200px) {
   .product__inner {
     margin: 0 -20px;
@@ -685,6 +953,16 @@ img {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     line-height: 36px;
+  }
+  .link-tel__mobile {
+    display: inline-block;
+  }
+  .popup__form-title {
+    font-size: 28px;
+    line-height: 24px;
+  }
+  .popup__form-text {
+    font-size: 20px;
   }
 }
 
